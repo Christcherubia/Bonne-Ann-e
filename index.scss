@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "font1";
+    src: url(./fonts/Gotu-Regular.ttf);
+}
+$font: font1, sans-serif;
+$color1: rgba(228, 228, 228, 0.918);
+$color2: rgba(0, 163, 192, 0.692);
+$color3: rgb(204, 0, 255);
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+margin: 0px auto;
+    padding: 15px;
+    background-size: 100vh;
+    box-shadow: 1.7px 1.4px 1.3px rgb(53, 53, 53);
+    border-radius: 25px 12px 17px 15px;
+    text-align: center;
+    background-image: url(./Media/hamish-dowson-HgxVSzUHDRY-unsplash.jpg);
+    h1 {
+        position: relative;
+        font-size: 2.5rem;
+        color: $color3;
+        text-shadow: 1.7px 1.4px 1.3px rgb(53, 53, 53);
+        top: 1.9rem;
+        text-align: center;
+        background-color: $color2;
+        border-radius: 5px;
+        box-shadow: 2.5px 2.1px 1.5px rgb(12, 165, 193, 0.755);
+        text-transform: uppercase;
+        line-height: 3.5rem;
+    }
+    h3 {
+        text-align: justify;
+        margin: 50px;
+        color: $color2;
+        font-weight: 700;
+        text-shadow: 0.5px 0.2px 0.3px $color1;
+    }
+    h4 {
+        color: $color3;
+        font-weight: 400;
+        text-decoration: underline;
+        text-transform: capitalize;
+    }
+
+    h6 {
+        margin: 45px 15px 12px 15px;
+        font-size: 1.7rem;
+        color: $color1;
+    }
+    
+    .start  {
+        position: absolute;
+        border-style: solid 0.5px $color2;
+        border-radius: 50px;
+        font-size: 1px;
+        background: $color2;
+        filter: blur(15px);
+        top: 0px;
+        z-index: 10;
+        opacity: 0;
+        animation: anim 7s forwards;
+        filter: hue-rotate(0deg);
+    
+        @keyframes anim {
+            to {
+                top: -77px;
+                left: var(--left);
+                opacity: 1;
+                filter: blur(0.5px);
+                filter: hue-rotate(280deg);
+                border-style: solid;
+                border-radius: 50px;
+                
+            }
+        }
+}
+
+
+}
+.text {
+    color: $color1;
+    font-weight: bold;
+    text-shadow: 0.3px 0.4px 0.5px rgb(58, 58, 58);
+    text-align: justify;
+    padding: 50px;
+
+    ul {
+        list-style-type: none;
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
